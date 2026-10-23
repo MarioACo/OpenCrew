@@ -20,8 +20,7 @@ jobs:
   opencrew:
     runs-on: ubuntu-latest
     steps:
-      # Pin a full commit SHA in security-sensitive repositories. The main
-      # reference is appropriate while OpenCrew remains in preview.
-      - uses: MarioACo/OpenCrew@main
+      # Pin a full commit SHA in security-sensitive repositories.
+      - uses: MarioACo/OpenCrew@v0.1.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -14,7 +14,8 @@ It combines the repetitive contributor workflow that maintainers otherwise rebui
 - English and Spanish messages;
 - deterministic rules with no AI and no contributor code execution.
 
-> OpenCrew is in early development. Pin a commit SHA when testing it in a real repository until `v1` is released.
+> OpenCrew is in early development. Use the `v0.1.0` preview release or pin a
+> full commit SHA when testing it in a security-sensitive repository.
 
 ## How it works
 
@@ -24,9 +25,8 @@ OpenCrew reacts to GitHub metadata events. It never checks out or executes pull 
 2. Copy [`examples/workflow.yml`](examples/workflow.yml) to `.github/workflows/opencrew.yml`.
 3. Adjust the workflow permissions and policy for your project.
 
-During the preview, the example uses `MarioACo/OpenCrew@main`. Security-sensitive
-repositories should pin the action to a full commit SHA. Stable version tags will
-be introduced with the first stable release.
+The example uses the `MarioACo/OpenCrew@v0.1.0` preview release.
+Security-sensitive repositories should pin the action to a full commit SHA.
 
 Minimal policy:
 
