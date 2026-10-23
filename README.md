@@ -22,8 +22,11 @@ OpenCrew reacts to GitHub metadata events. It never checks out or executes pull 
 
 1. Copy [`examples/opencrew.yml`](examples/opencrew.yml) to `.github/opencrew.yml`.
 2. Copy [`examples/workflow.yml`](examples/workflow.yml) to `.github/workflows/opencrew.yml`.
-3. Replace `OWNER/REPOSITORY@v1` with the published action reference.
-4. Adjust the workflow permissions and policy for your project.
+3. Adjust the workflow permissions and policy for your project.
+
+During the preview, the example uses `MarioACo/OpenCrew@main`. Security-sensitive
+repositories should pin the action to a full commit SHA. Stable version tags will
+be introduced with the first stable release.
 
 Minimal policy:
 

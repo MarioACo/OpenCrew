@@ -1,6 +1,5 @@
-# Copy to .github/workflows/opencrew.yml after replacing OWNER/REPOSITORY with
-# the published OpenCrew repository. pull_request_target is metadata-only here:
-# OpenCrew never checks out or executes code from the pull request.
+# Copy to .github/workflows/opencrew.yml. pull_request_target is metadata-only
+# here: OpenCrew never checks out or executes code from the pull request.
 name: OpenCrew
 
 on:
@@ -21,6 +20,8 @@ jobs:
   opencrew:
     runs-on: ubuntu-latest
     steps:
-      - uses: OWNER/REPOSITORY@v1
+      # Pin a full commit SHA in security-sensitive repositories. The main
+      # reference is appropriate while OpenCrew remains in preview.
+      - uses: MarioACo/OpenCrew@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
