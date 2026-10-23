@@ -1,0 +1,32 @@
+{
+  "name": "opencrew-action",
+  "version": "0.1.0",
+  "description": "A transparent GitHub Action for welcoming, assigning, and guiding open-source contributors.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist --minify",
+    "test": "node --test",
+    "check": "npm run test && npm run build"
+  },
+  "keywords": [
+    "github-action",
+    "open-source",
+    "contributors",
+    "issues",
+    "pull-requests"
+  ],
+  "author": "MarioACo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/github": "^9.1.1",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4"
+  }
+}

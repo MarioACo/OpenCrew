@@ -1,0 +1,26 @@
+# Copy to .github/workflows/opencrew.yml after replacing OWNER/REPOSITORY with
+# the published OpenCrew repository. pull_request_target is metadata-only here:
+# OpenCrew never checks out or executes code from the pull request.
+name: OpenCrew
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_target:
+    types: [opened, edited, synchronize, reopened]
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  opencrew:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: OWNER/REPOSITORY@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,21 @@
+name: OpenCrew
+description: Welcome contributors, manage issue claims, release stale work, and validate pull requests.
+author: MarioACo
+
+inputs:
+  github-token:
+    description: GitHub token used to manage issues and pull request comments.
+    required: true
+    default: ${{ github.token }}
+  config-path:
+    description: Path to the OpenCrew configuration file.
+    required: false
+    default: .github/opencrew.yml
+
+runs:
+  using: node20
+  main: dist/index.js
+
+branding:
+  icon: users
+  color: purple

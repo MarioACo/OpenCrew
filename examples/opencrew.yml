@@ -1,0 +1,26 @@
+# Copy to .github/opencrew.yml and adapt it to your repository.
+language: en
+
+claims:
+  enabled: true
+  claim_command: /claim
+  release_command: /unclaim
+  max_per_user: 1
+  inactivity_days: 7
+  eligible_labels:
+    - good first issue
+    - help wanted
+  claimed_label: opencrew:claimed
+  claimed_label_color: 7057ff
+
+pull_requests:
+  enabled: true
+  require_issue_reference: true
+  allowed_base_branches:
+    - main
+  required_sections:
+    - What & why
+    - Checklist
+
+welcome:
+  enabled: true

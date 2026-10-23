@@ -1,0 +1,23 @@
+# OpenCrew's own contribution policy. The repository will dogfood this file
+# after the action is published and its workflow can reference a stable tag.
+language: en
+
+claims:
+  enabled: true
+  max_per_user: 1
+  inactivity_days: 7
+  eligible_labels:
+    - good first issue
+    - help wanted
+
+pull_requests:
+  enabled: true
+  require_issue_reference: true
+  allowed_base_branches:
+    - main
+  required_sections:
+    - What & why
+    - Checklist
+
+welcome:
+  enabled: true
