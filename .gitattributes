@@ -1,0 +1,8 @@
+# Keep source and the committed Action bundle stable across operating systems.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
